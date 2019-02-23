@@ -1,0 +1,87 @@
+aside{
+	position:fixed;
+	width:100%;
+}
+.aside_1{
+	width:152px;height:181px;
+	background:#0cb95f;
+	position:fixed;
+	top:100px;right:70px;
+	z-index:2;
+}
+.aside_1 .contact{
+	width:126px;height:25px;
+	margin:0 auto;
+}
+.aside_1 span{
+	font-size:12px;
+	color:#fff;
+	line-height:20px;
+}
+.aside_1 img{
+	margin-left:50px;
+	vertical-align:middle;
+}
+.js{
+	width:126px;height:50px;
+	background:#fff;
+	margin:0 auto;
+}
+.js img{
+	margin:8px 8px;
+}
+.aside_1>img{
+	margin:0 13px;
+}
+.aside_2{
+	width:52px;height:307px;
+	position:fixed;
+	top:100px;right:5px;
+	z-index:2;
+}
+.aside_2 div:first-child{
+	width:52px;height:50px;
+	background:#0cb95f;
+}
+.aside_2 span{
+	display:block;
+	width:30px;height:30px;
+	padding:11px 10px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+}
+.aside_2 div.i_2,.aside_2 div.i_3,.aside_2 div.i_4,.aside_2 div.i_5,.aside_2 div.i_6{
+	width:52px;height:50px;
+	border:1px solid #e5e5e5;
+	background:#fff;
+}
+.aside_2 div.i_2{
+	background:url('../images/common_images/shopping_car.jpg') no-repeat center center;
+}
+.aside_2 div.i_3{
+	background:url('../images/common_images/house.jpg') no-repeat center center;
+}
+.aside_2 div.i_4{
+	background:url('../images/common_images/aixin.jpg') no-repeat center center;
+}
+.aside_2 div.i_5{
+	background:url('../images/common_images/erweima.jpg') no-repeat center center;
+}
+.aside_2 div.i_6{
+	background:url('../images/common_images/idea.jpg') no-repeat center center;
+}
+.aside_2 div a{
+	display:none;
+	width:30px;height:30px;
+	padding:11px 10px;
+	font-size:12px;
+	text-align:center;
+	text-decoration:none;
+	cursor:pointer;
+}
+.aside_2 div:hover a{
+	display:block;
+	background:#0cb95f;
+	color:#fff;
+}

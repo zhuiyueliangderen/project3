@@ -1,0 +1,90 @@
+header iframe{
+	width:100%;
+}
+header{
+	min-width: 1287px;
+}
+.nav{
+	width:100%;height:40px;
+	background:#f4f4f4;
+}
+.container{
+	width:990px;height:40px;
+	margin:0 auto;
+	background:#f4f4f4;
+}
+.nav ul li a:hover{
+	text-decoration:underline;
+	color:#0cb95f;
+}
+.container .num1{
+	float:left;
+}
+.container .num1 img{
+	display:inline-block;
+	margin-top:12px;
+	vertical-align:bottom;
+}
+.container .num1 a{
+	display:inline-block;
+	font-size:12px;
+	color:#333;
+}
+.container .num1 span{
+	color:#d0c9c9;
+	margin:0 10px;
+}
+.container .num2{
+	float:left;
+}
+.container .num2 img{
+	display:inline-block;
+	margin-top:10px;
+	vertical-align:bottom;
+}
+.container .num2 a{
+	display:inline-block;
+	font-size:12px;
+	color:#333;
+}
+.container .num3 a{
+	float:right;
+	display:inline-block;
+	margin-top:12px;
+	margin-left:20px;
+	font-size:12px;
+	color:#333;
+}
+.container .num4 a{
+	float:right;
+	display:inline-block;
+	margin-top:12px;
+	font-size:12px;
+	color:#333;
+}
+.container:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.image{
+	width:990px;height:120px;
+	margin:0 auto;
+}
+.image img{
+	float:left;
+	margin-top:25px;
+}
+
+.image .sub{
+	height:55px;
+	float:left;
+	border-left:1px solid #e5e5e5;
+	margin-top:36px;
+	margin-left:10px;
+	padding-left:20px;
+}
+.image .sub span{
+	line-height:55px;
+	font-size:20px;
+}

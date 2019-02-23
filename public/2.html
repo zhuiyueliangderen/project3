@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            #d1 a{
+                display:inline-block;
+                width:75px;height:25px;
+                color:#000;
+            }
+            #d1 .show{
+                background:red;
+            }
+            #d2{
+                width:730px;height:200px;
+                position:relative;
+            }
+            #d2 div{
+                width:100%;height:100%;
+                position:absolute;
+                top:0;left:0;
+                display:none;
+            }
+            
+            #d2 .show{
+                display:block;
+                background:#aaf;
+            }
+        </style>
+           
+    </head>
+    <body>
+        <div id="d1">
+            <a class="show" href="#" data-toggle="tab" data-target="#list1">家庭常用<i></i></a><label>|</label>
+            <a href="#" data-toggle="tab" data-target="#list2">胃肠用药<i></i></a><label>|</label>
+            <a href="#" data-toggle="tab" data-target="#list3">心脑血管<i></i></a><label>|</label>
+            <a href="#" data-toggle="tab" data-target="#list4">五官科药<i></i></a><label>|</label>
+        </div>
+        <div id="d2">
+            <div id="list1" class="show">
+                <img src="images/drug_images/fufangwuzhigan.jpg" alt="" />
+                <img src="images/drug_images/guweihuoluo.jpg" alt="" />
+                <img src="images/drug_images/fusaimi.jpg" alt="" />
+                <img src="images/drug_images/sangjiangganmaopian.jpg" alt="" />
+            </div>
+            <div id="list2">
+                <img src="images/drug_images/xiaoerqixingcha.jpg" alt="" />
+                <img src="images/drug_images/weiudianqielv.jpg" alt="" />
+                <img src="images/drug_images/hongxiangzhitongding.jpg" alt="" />
+                <img src="images/drug_images/runchang.jpg" alt="" />
+            </div>
+            <div id="list3">
+                <img src="images/drug_images/fufangwuzhigan.jpg" alt="" />
+                <img src="images/drug_images/guweihuoluo.jpg" alt="" />
+                <img src="images/drug_images/fusaimi.jpg" alt="" />
+                <img src="images/drug_images/sangjiangganmaopian.jpg" alt="" />
+            </div>
+            <div id="list4">
+                <img src="images/drug_images/xiaoerqixingcha.jpg" alt="" />
+                <img src="images/drug_images/weiudianqielv.jpg" alt="" />
+                <img src="images/drug_images/hongxiangzhitongding.jpg" alt="" />
+                <img src="images/drug_images/runchang.jpg" alt="" />
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script>
+            $("a").mouseover(function(){
+                var $tab=$(this);
+                $tab.addClass("show");
+                $tab.siblings().removeClass("show");
+                var $i=$tab.index();
+                console.log($i);
+                if($i==0){
+                    $("#d2").children(":first-child").addClass("show");
+                    
+                }else{
+                    var i=$i/2;
+                    console.log(i);
+                    $("#d2").children(`:nth-child(${i})`).addClass("show");
+                    $("#d2").children(`:nth-child(${i})`).siblings().removeClass("show");
+                }
+            });
+            
+        </script>
+    <body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/header_style.css" />
+		<link rel="stylesheet" href="css/footer_style.css" />
+		<link rel="stylesheet" href="css/user_register.css">
+		<link rel="stylesheet" href="css/aside_style.css">
+	</head>
+	<body>
+		<header>
+			<iframe src="header.html" scrolling="no" frameborder="0"></iframe>
+		</header>
+		<div class="aside_1">
+			<div class="contact">
+				<span>在线客服:</span>
+				<img src="images/common_images/qq-close.png" alt="" />
+			</div>
+			<div class="js">
+				<img src="images/common_images/yfwcc.png" alt="" />
+			</div>
+			<img src="images/common_images/qq-tel.png" alt="" />
+		</div>
+		<div class="aside_2">
+			<div class="i_1">
+				<span>联系客服</span>
+			</div>
+			<div class="i_2">
+				<a class="t" href="#">购物清单</a>
+			</div>
+			<div class="i_3">
+				<a class="t" href="#">同店购买</a>
+			</div>
+			<div class="i_4">
+				<a class="t" href="#">关注我们</a>
+			</div>
+			<div class="i_5">
+				<a class="t" href="#">手机APP</a>
+			</div>
+			<div class="i_6">
+				<a class="t" href="#">意见反馈</a>
+			</div>
+		</div>
+		<section>
+			<div class="container">
+				<!--切换导航栏-->
+				<div class="tab_nav">
+					<ul>
+						<li class="first">
+							<a href="#">个人用户</a>
+						</li>
+						<li class="second">
+							<a href="user_register_company.html">商家入驻</a>
+						</li>
+					</ul>
+				</div>
+				<!--具体内容-->
+				<div class="item">
+				<!--必填项-->
+					<div class="necessary">
+						<div class="line">
+							<p>注册信息(必填项)</p>
+						</div>
+						<form action="/user/register" method="post">
+							<div>
+								<span>
+									<label>*</label>用户名：
+								</span>
+								<span class="bginput">
+									<img src="images/common_images/icons_ren.jpg" alt="" />
+									<input type="text" name="uname" placeholder="请输入用户名" / enctype="text/plain">
+								</span>
+								<span>用户名格式不正确</span>
+							</div>
+							<div>
+								<span>
+									<label>*</label>登录密码：
+								</span>
+								<span class="bginput">
+									<img src="images/common_images/icons_mima.jpg" alt="" />
+									<input type="password" name="upwd" placeholder="请输入6-11位数字或字母" />
+								</span>
+								<span>密码格式不正确</span>
+							</div>
+							<div>
+								<span>
+									<label>*</label>确认密码：
+								</span>
+								<span class="bginput">
+									<input type="password" name="rupwd"/>
+								</span>
+								<span>两次输入的密码不一致</span>
+							</div>
+							<div>
+								<span>
+									<label>*</label>手机号码：
+								</span>
+								<span class="bginput">
+									<input type="tel" name="phone" />
+								</span>
+								<span>手机号格式不正确</span>
+							</div>
+							<div>
+								<span>
+									<label>*</label>手机验证码：
+								</span>
+								<span class="bginput">
+									<input type="text">
+								</span>
+							</div>
+							<!--选填项-->
+							<div class="optional">
+								<div class="line">
+									<p>个人信息(选填项)</p>
+								</div>
+								<div>
+									<span>
+										真实姓名：
+									</span>
+									<span class="bginput">
+										<input type="text" id="user_name">
+									</span>
+								</div>
+								<div>
+									<span>
+										电子邮箱：
+									</span>
+									<span class="bginput">
+										<input type="email" name="email">
+									</span>
+								</div>	
+								<div>
+									<span>
+										固定电话：
+									</span>
+									<span class="bginput">
+										<input type="phone">
+									</span>
+								</div>
+								<div>
+									<span>
+										所在地区：
+									</span>
+									<span class="bginput">
+										<input type="text">
+									</span>
+								</div>
+								<div>
+									<span>
+										详细地址：
+									</span>
+									<span class="bginput">
+										<input type="text" name="adress" placeholder="填写详细的街道名及门牌号、楼域名及房间号">
+									</span>
+								</div>
+								<div class="my_checkbox">
+									<input type="checkbox" checked>我同意
+									<a href="#">《药房网商城入驻用户服务协议》</a>
+								</div>
+								<div>
+									<input type="button" value="立即注册" id="btn" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<iframe src="footer.html" scrolling="no" frameborder="0"></iframe>
+		</footer>
+		<script src="js/user_register.js"></script>
+	</body>
+</html>

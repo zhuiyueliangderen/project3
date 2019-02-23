@@ -1,0 +1,22 @@
+footer iframe{
+	width:100%;
+}
+footer{
+	background:#f4f4f4;
+	padding-top:20px;
+}
+footer>div{
+	text-align:center;
+	color:#dee5ea;
+}
+footer a,footer span{
+	font-size:12px;
+	color:#999;
+}
+footer span{
+	display:inline-block;
+	margin:0 5px;
+}
+footer a:hover{
+	text-decoration:underline;
+}

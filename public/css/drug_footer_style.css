@@ -1,0 +1,103 @@
+footer iframe{
+	width:100%;
+	height:433px;
+}
+.navigation{
+	width:100%;height:135px;
+	padding:20px 0;
+	background:#f4f4f4;
+}
+.navigation .navigation_container{
+	width:1190px;height:136px;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+}
+.navigation .navigation_container div>h5{
+	width:147px;height:26px;
+	font-size:14px;
+	line-height:26px;
+	color:#6a6a6a;
+}
+.navigation .navigation_container div a{
+	display:block;
+	width:147px;height:26px;
+	font:12px "Arial";
+	color:#888;
+	line-height:26px;
+}
+.navigation .navigation_container div a:hover{
+	color:#0cb95f;
+	text-decoration:underline;
+}
+.navigation .navigation_container div:nth-child(7) a,.navigation .navigation_container div:nth-child(8) a{
+	height:84px;
+	margin-top:5px;
+}
+.navigation .navigation_container div:nth-child(7) p,.navigation .navigation_container div:nth-child(8) p{
+	font-size:12px;
+	color:#666;
+	margin-top:0px;
+}
+/*--版权部分--*/
+.copyright{
+	width:100%;height:218px;
+	padding:20px 0;
+	background:#444a50;
+}
+.copyright .copyright_container{
+	width:1190px;height:293px;
+	margin:0 auto;
+}
+.copyright .copyright_container .copyright_list{
+	width:1190px;height:30px;
+	margin:10px 0;
+	display:flex;
+	justify-content:space-between;
+	flex-flow:row wrap;
+}
+.copyright .copyright_container .copyright_list span{
+	display:block;
+	width:2px;height:14px;
+	font-size:12px;
+	color:#dee5ea;
+	margin-top:0px;
+}
+.copyright .copyright_container .copyright_list a{
+	display:block;
+	width:68px;height:14px;
+	font:12px Arial;
+	color:#dee5ea;
+	text-align:center;
+}
+.copyright .copyright_container .copyright_list .first{
+	text-align:left;
+}
+.copyright .copyright_container .copyright_list:nth-child(2){
+	width:633px;
+	display:flex;
+	justify-content:space-around;
+	flex-flow:row wrap;
+}
+.copyright .copyright_container .copyright_bottom{
+	width:1190px;height:56px;
+	margin:0 auto;
+}
+.copyright .copyright_container .copyright_bottom span,.copyright .copyright_container .copyright_bottom a{
+	display:inline-block;
+	margin-right:18px;
+	font:12px Arial;
+	color:#959aa0;
+}
+.copyright .copyright_container .copyright_bottom p{
+	font:12px Arial;
+	color:#959aa0;
+	margin-top:0px;
+}
+.copyright .copyright_container .copyright_bottom .footer_icons a{
+	display:inline-block;
+	margin-right:10px;
+}
+.copyright .copyright_container .copyright_bottom p:last-child{
+	padding:8px 0;
+}

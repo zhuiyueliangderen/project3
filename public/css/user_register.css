@@ -1,0 +1,125 @@
+section{
+	width:1903px;height:994px;
+	background:#f4f4f4;
+	
+}
+.container{
+	width:990px;height:993px;
+	margin:0 auto;
+	padding:30px 0;
+}
+/*切换导航栏样式*/
+.tab_nav{
+	width:990px;height:49px;
+}
+.tab_nav ul{
+	display:flex;
+	justify-content:start;
+	flex-flow:row nowrap;
+}
+.tab_nav ul li{
+	width:181px;height:49px;
+	text-align:center;
+}
+.tab_nav ul li.first{
+	background:#fff;
+	border-top:2px solid #0cb95f;
+}
+.tab_nav ul li.second{
+	border:1px solid #e5e5e5;
+}
+.tab_nav ul li a{
+	font-size:18px;
+	color:#333;
+	line-height:49px;
+}
+.tab_nav ul .first a{
+	color:#0cb95f;
+}
+.item{
+	width:990px;height:884px;
+	padding-top:30px;
+	
+	border:1px solid #e5e5e5;
+	background:#fff;
+}
+
+.item .line{
+	width:998px;height:40px;
+	margin:10px 0;
+	border-top:1px dotted #ccc;
+}
+.item .line p{
+	width:165px;height:40px;
+	font-size:14px;
+	color:#666;
+	line-height:40px;
+	margin:0;
+	text-align:right;
+}
+.item form div{
+	width:988px;height:40px;
+	margin:20px 0;
+	position:relative;
+}
+.item form div span{
+	display:inline-block;
+	width:170px;height:40px;
+	text-align:right;
+	line-height:40px;
+	font-size:14px;color:#999;
+	margin-bottom:0px;
+	position:absolute;
+	top:0px;left:0px;
+}
+.item form div span label{
+	font-size:16px;
+	color:#e50000;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.item form div span.bginput{
+	display:inline-block;
+	width:322px;height:42px;
+	border:1px solid #e5e5e5;
+	text-align:left;
+	top:0px;left:180px;
+	position:relative;
+}
+.item form div span.bginput img{
+	margin:8px 0 8px 7px;
+}
+.item form div span.bginput input{
+	width:265px;height:39px;
+	padding-right:20px;
+	border:0;
+	position:absolute;
+	top:0px;right:0px;
+}
+.item form div span:nth-child(3){
+	display:none;
+}
+.item form div span.vali_fail{
+	position:absolute;
+	top:0px;left:510px;
+	color:#f00;
+	text-align:left;
+}
+.item form div.my_checkbox{
+	width:808px;height:40px;
+	padding-left:180px;
+	line-height:40px;
+	font-size:14px;
+	color:#666;
+}
+.item form div.my_checkbox a{
+	color:#0cb95f;
+}
+.optional div:last-child>input{
+	width:320px;height:48px;
+	background:#0cb95f;
+	font-size:18px;
+	color:#fff;
+	margin-left:180px;
+	border:0;
+}
