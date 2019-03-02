@@ -56,7 +56,7 @@ txtRpwd.onblur=function(){
 	}
 }
 //获取button按钮
-var btn=document.getElementById("btn");
+/*var btn=document.getElementById("btn");
 btn.onclick=function(){
 	//1.创建XHR对象
 	var xhr=new XMLHttpRequest();
@@ -73,7 +73,7 @@ btn.onclick=function(){
 				sessionStorage.setItem("$uname",res.$uname);
 				//location.href="http://127.0.0.1:3000/drug_header.html?page=user_register"
 				//绝对路径实现跨域
-				location.href="http://127.0.0.1:5500/public/index.html?page=user_register";
+				location.href="http://127.0.0.1:3000/index.html?page=user_register";
 			}
 		}
 	}
@@ -84,4 +84,33 @@ btn.onclick=function(){
 	//修改请求头，可以发送任意文本
 	xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	xhr.send(formdata);
-}
+}*/
+$("#btn").click(function(){
+	var $uname=$("[name=uname]").val();
+	var $upwd=$("[name=upwd]").val();
+	var $phone=$("[name=phone]").val();
+	$.ajax({
+		url:"http://127.0.0.1:3000/user/register",
+		data:{uname:$uname,upwd:$upwd,phone:$phone},
+		type:"post",
+		dataType:"json",
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+			console.log(XMLHttpRequest);
+			console.log(textStatus);
+			console.log(errorThrown);
+		},
+		success:function(result){
+			console.log(result);
+			console.log(typeof(result));
+			if(result.code==1){
+				alert("注册成功");
+				sessionStorage.setItem("$uname",result.$uname);
+				//location.href="http://127.0.0.1:3000/drug_header.html?page=user_register"
+				//绝对路径实现跨域
+				location.href="index.html?page=user_register";
+			}else if(result.code==-1){
+				alert("用户名已存在");
+			}
+		}
+	})
+});

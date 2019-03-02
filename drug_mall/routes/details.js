@@ -6,14 +6,14 @@ const pool=require("../pool");
 var router=express.Router();
 //创建路由
 router.get('/details',(req,res)=>{
+	/*res.writeHead(200,{
+		"Access-Control-Allow-Origin":"*"
+	});*/
 	var output={
 		drug:{/*dname,brand,dosage,company...*/},
 		pics:[/*{sm,md,lg},{sm,md,lg},{sm,md,lg}...*/],
 		list:[/*{img,lname,guige,dosage,location,cName}...*/]
 	};
-	res.writeHead(200,{
-		"Access-Control-Allow-Origin":"*"
-	});
 	var $did=req.query.did;
 	if($did!==undefined){
 		//查询一个商品的详细信息
@@ -57,9 +57,9 @@ router.get('/details',(req,res)=>{
 	}
 });
 router.get("/getMore",(req,res)=>{
-	res.writeHead(200,{
+	/*res.writeHead(200,{
 		"Access-Control-Allow-Origin":"*"
-	});
+	});*/
 	var $did=req.query.did;
 	var pno=req.query.pno;
 	var pageSize=req.query.pageSize;

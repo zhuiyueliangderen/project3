@@ -6,6 +6,9 @@ const pool=require("../pool.js");
 const router=express.Router();
 //添加查询路由
 router.get("/detail",(req,res)=>{
+	/*res.writeHead(200,{
+		"Access-Control-Allow-Origin":"*"
+	});*/
 	var $did=req.query.did;
 	var sql="select * from drug_details where did=?";
 	pool.query(sql,[$did],(err,result)=>{
@@ -18,6 +21,9 @@ router.get("/detail",(req,res)=>{
 	});
 });
 router.get("/search",(req,res)=>{
+	/*res.writeHead(200,{
+		"Access-Control-Allow-Origin":"*"
+	});*/
 	var $val=req.query.val;
 	$val="%"+$val+"%";
 	console.log($val);

@@ -1,5 +1,5 @@
 //1.查找触发事件的元素
-var tabs=document.querySelectorAll(
+/*var tabs=document.querySelectorAll(
 	"div.form-tab>a"
 );
 //2.绑定事件处理函数
@@ -41,10 +41,10 @@ btn.onclick=function(){
 				//3.将用户名保存 sessionStorage
 				sessionStorage.setItem("uname",res.uname);
 				//location.href="http://127.0.0.1:3000/drug_header.html?page=user_login"
-				location.href="http://127.0.0.1:5500/public/index.html?page=user_login"
+				location.href="http://127.0.0.1:3000/index.html?page=user_login"
 			}else if(res.code==-1){
 				alert("用户名或密码错误");
-				location.href="http://127.0.0.1:5500/public/user_login.html"
+				location.href="http://127.0.0.1:3000/user_login.html"
 			}
 		}else{
 			console.log(xhr.readyState);
@@ -57,4 +57,33 @@ btn.onclick=function(){
 	//修改请求头，可以发送任意文本
 	xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	xhr.send(formdata);
-}
+}*/
+$("#btn").click(function(){
+	var $uname=$("input:text").val();
+	var $upwd=$("input:password").val();
+	$.ajax({
+		url:"http://127.0.0.1:3000/user/login",
+		data:{uname:$uname,upwd:$upwd},
+		type:"post",
+		dataType:"json",
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+			console.log(XMLHttpRequest);
+			console.log(textStatus);
+			console.log(errorThrown);
+		},
+		success:function(result){
+			console.log(111);
+			console.log(typeof(result));
+			if(result.code==1){
+				alert("登录成功");
+				//3.将用户名保存 sessionStorage
+				sessionStorage.setItem("uname",result.uname);
+				//location.href="http://127.0.0.1:3000/drug_header.html?page=user_login"
+				location.href="index.html?page=user_login";
+			}else if(result.code==-1){
+				alert("用户名或密码错误");
+				location.href="/user_login.html";
+			}
+		}
+	})
+});

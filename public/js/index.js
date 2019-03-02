@@ -340,3 +340,5 @@ var uname=sessionStorage.getItem("uname");
 if(!uname){
 	span.innerHTML="欢迎回来  "+uname;
 }*/
+
+

@@ -6,6 +6,9 @@ const pool=require("../pool");
 var router=express.Router();
 //添加注册路由
 router.post('/register',(req,res)=>{
+	/*res.writeHead(200,{
+		"Access-Control-Allow-Origin":"*"
+	});*/
 	var obj=req.body;
 	var $uname=req.body.uname;
 	var $upwd=req.body.upwd;
@@ -44,6 +47,9 @@ router.post('/register',(req,res)=>{
 });
 //添加用户登录路由
 router.post('/login',(req,res)=>{
+	/*res.writeHead(200,{
+		"Access-Control-Allow-Origin":"*"
+	});*/
 	var $uname=req.body.uname;
 	var $upwd=req.body.upwd;
 	if(!$uname){
@@ -57,9 +63,12 @@ router.post('/login',(req,res)=>{
 	var sql="select * from user where uname=? and upwd=?";
 	pool.query(sql,[$uname,$upwd],(err,result)=>{
 		if(err) throw err;
+		console.log(result);
 		if(result.length>0){
 			var uid=result[0].uid;
+			//console.log(uid);
 			var uname=result[0].uname;
+			console.log(uname);
 			//req.session.uid=uid;
 			//req.session.uname=uname;
 			res.send({code:1,uname});
