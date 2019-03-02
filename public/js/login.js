@@ -67,12 +67,13 @@ $("#btn").click(function(){
 		type:"post",
 		dataType:"json",
 		error:function(XMLHttpRequest,textStatus,errorThrown){
-			console.log(XMLHttpRequest);
-			console.log(textStatus);
-			console.log(errorThrown);
+			console.log(XMLHttpRequest.status);
+			console.log(XMLHttpRequest.readyState);
+			//console.log(textStatus);
 		},
 		success:function(result){
 			console.log(111);
+			//result = eval('('+result+')');
 			console.log(typeof(result));
 			if(result.code==1){
 				alert("登录成功");
@@ -82,7 +83,7 @@ $("#btn").click(function(){
 				location.href="index.html?page=user_login";
 			}else if(result.code==-1){
 				alert("用户名或密码错误");
-				location.href="/user_login.html";
+				location.href="user_login.html";
 			}
 		}
 	})

@@ -46,18 +46,18 @@ router.post('/register',(req,res)=>{
 	});
 });
 //添加用户登录路由
-router.post('/login',(req,res)=>{
-	/*res.writeHead(200,{
+router.post("/login",(req,res)=>{
+	res.writeHead(200,{
 		"Access-Control-Allow-Origin":"*"
-	});*/
+	});
 	var $uname=req.body.uname;
 	var $upwd=req.body.upwd;
 	if(!$uname){
-		res.send("<script>alert('用户名不能为空');location.href='http://127.0.0.1:3000/user_login.html'</script>");
+		res.end("<script>alert('用户名不能为空');location.href='http://127.0.0.1:3000/user_login.html'</script>");
 		return;
 	}
 	if(!$upwd){
-		res.send("<script>alert('密码不能为空');location.href='http://127.0.0.1:3000/user_login.html'</script>");
+		res.end("<script>alert('密码不能为空');location.href='http://127.0.0.1:3000/user_login.html'</script>");
 		return;
 	}
 	var sql="select * from user where uname=? and upwd=?";
@@ -71,9 +71,11 @@ router.post('/login',(req,res)=>{
 			console.log(uname);
 			//req.session.uid=uid;
 			//req.session.uname=uname;
-			res.send({code:1,uname});
+			res.end("{code:1,uname}");
+			
 		}else{
-			res.send({code:-1,msg:"用户名或密码错误"});
+			res.end({code:-1,msg:"用户名或密码错误"});
+			return;
 		}
 	});
 });
