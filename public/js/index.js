@@ -153,7 +153,7 @@ var Previous=function(showDiv){//showDiv为形参
 		//就让前一个兄弟的class为show
 		showDiv.previousElementSibling.className="show";
 	}else{//否则就让当前div保持class为show
-		showDiv.parentNode.children[0].className="show";
+		showDiv.parentNode.children[3].className="show";
 	}
 }
 //向右轮播
@@ -165,7 +165,7 @@ var Next=function(showDiv){//showDiv为形参
 		//就让下一个兄弟的class为show
 		showDiv.nextElementSibling.className="show";
 	}else{//否则就让当前div保持class为show
-		showDiv.parentNode.children[3].className="show";
+		showDiv.parentNode.children[0].className="show";
 	}
 }
 
