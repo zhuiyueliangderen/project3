@@ -6,24 +6,26 @@ const pool=require("../pool.js");
 const router=express.Router();
 //添加查询路由
 router.get("/detail",(req,res)=>{
-	/*res.writeHead(200,{
+	res.writeHead(200,{
 		"Access-Control-Allow-Origin":"*"
-	});*/
+	});
 	var $did=req.query.did;
 	var sql="select * from drug_details where did=?";
 	pool.query(sql,[$did],(err,result)=>{
 		if(err) throw err;
 		if(result.length>0){
-			res.send(result);
+			res.write(JSON.stringify(result));
+			res.end();
 		}else{
-			res.send('detail err');
+			res.write(JSON.stringify('detail err'));
+			res.end();
 		}
 	});
 });
 router.get("/search",(req,res)=>{
-	/*res.writeHead(200,{
+	res.writeHead(200,{
 		"Access-Control-Allow-Origin":"*"
-	});*/
+	});
 	var $val=req.query.val;
 	$val="%"+$val+"%";
 	console.log($val);
@@ -36,7 +38,8 @@ router.get("/search",(req,res)=>{
 			res.write(JSON.stringify(result));
             res.end();
 		}else{
-			res.send("search err");
+			res.write(JSON.stringify("search err"));
+			res.end();
 		}
 	});
 });
