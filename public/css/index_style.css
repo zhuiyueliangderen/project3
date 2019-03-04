@@ -535,11 +535,11 @@ body{
 	margin-top:0px;
 }
  .content .content_right div ul li .gx{
-	width:202px;height:32px;
+	width:161px;height:32px;
 	background:rgba(0,0,0,0.5);
 	color:#fff;
 	position:absolute;
-	bottom:0;left:0;
+	bottom:0;left:21px;
 	text-align: left;
 	line-height: 18px;
 	padding:10px;
